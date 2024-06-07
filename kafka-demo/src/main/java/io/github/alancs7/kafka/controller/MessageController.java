@@ -17,7 +17,7 @@ public class MessageController {
 
     @PostMapping
     public ResponseEntity<String> sendMessage(@RequestBody String message) {
-        kafkaProducer.senMessage(message);
+        kafkaProducer.sendMessage(message);
         return ResponseEntity.ok("Message queued successfully");
     }
 }
